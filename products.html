@@ -1,0 +1,73 @@
+<html>
+<head>
+ <title>product search</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="follow">
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- import the webpage's javascript file -->
+    <script src="script.js" defer></script>
+</head>
+ <div id="container">
+    <header class="headerSection">
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="index.html">Home</a>
+        <a href="products.html" rel="nofollow">Products</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+   </div>
+    <span style="font-size: 30px;cursor:pointer" onclick="openNav()">&#9776;</span> 
+    <img id="myLogo" src="RR.png">
+    </header><br><br><br>
+
+
+<h1> Product search</h1>
+
+
+
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for a BOT..">
+
+<br><br><br><br>
+
+<ul id="myUL"> <div class="product_container">
+
+  <div class="product"><li><a href="billythebot.html">Buy Billy the Bot</a> <div class="product_detail_container"><div class="product_detail"><p>  <img class="productImage" src="billythebot.jpg" > </p> </div></div></li></div>
+  <div class="product"><li><a href="friendlybot.html">Buy a Friendly Bot</a> <div class="product_detail_container"><div class="product_detail"><p>    <img class="productImage" src="friendlybot.jpg" > </p> </div></div></li></div>
+
+  <div class="product"><li><a href="buddybots.html">Buy a Pair of Buddy Bots</a> <div class="product_detail_container"><div class="product_detail"><p>        <img class="productImage" src="buddybots.jpg"> </p> </div></div></li></div>
+    <div class="product"><li><a href="officebot.html">Buy an Office Bot</a> <div class="product_detail_container"><div class="product_detail"><p>        <img class="productImage" src="officebot.jpg"> </p> </div></div></li></div>
+  <div class="product"><li><a href="botdesign.html">Make Your Own </a> <div class="product_detail_container"><div class="product_detail"><p>        <img class="productImage" src="botdesign.jpg" > </p> </div></div></li></div>
+  
+  <div class="product"><li><a href="bigbot.html">Buy a Big Bot</a> <div class="product_detail_container"><div class="product_detail"><p>   <img class="productImage" src="bigbot.jpg" ></p> </div></div></li></div>
+</ul></div>
+
+<script>
+function myFunction() {
+  // Declare variables
+  var input, filter, ul, li, a, i, txtValue;
+  input = document.getElementById('myInput');
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("myUL");
+  li = ul.getElementsByTagName('li');
+
+  // Loop through all list items, and hide those who don't match the search query
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("a")[0];
+    txtValue = a.textContent || a.innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}
+</script>
+<script>
+
+</script>
+</html>
